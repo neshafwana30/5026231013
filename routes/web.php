@@ -15,7 +15,7 @@ use App\Http\Controllers\Link;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend');
 });
 
 
@@ -25,6 +25,34 @@ Route::get('halo', function () {
 
 Route::get('blog', function () {
 	return view('blog');
+});
+
+Route::get('/pertama', function () {
+    return view('pertama');
+});
+
+Route::get('/kodesoal1', function () {
+    return view('kodesoal1');
+});
+
+Route::get('/pertemuanketiga', function () {
+    return view('pertemuanketiga');
+});
+
+Route::get('/js1', function () {
+    return view('js1');
+});
+
+Route::get('/js2', function () {
+    return view('js2');
+});
+
+Route::get('/linktree', function () {
+    return view('linktree');
+});
+
+Route::get('/index', function () {
+    return view('index');
 });
 
 Route::get('blog', [Link::class, 'helloworld']);

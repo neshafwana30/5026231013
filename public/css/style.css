@@ -1,0 +1,502 @@
+/* Ini pokoknya kebutuhan badannya */
+body
+{
+    background-color: #6086b4;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container
+{
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* -------------------------------------------Gambar di paling atas gais---------------------------------------------- */
+.custom-blur-overlay
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    mask: radial-gradient(100% 100% at center top, transparent 60%, #000 100%);
+    -webkit-mask: radial-gradient(100% 100% at center top, transparent 60%, #000 100%);
+    z-index: 2;
+}
+
+.image-container
+{
+    min-width: none;
+    max-width: 580px;
+    background-color: #6086b4;
+    background-image: url('https://ugc.production.linktr.ee/e893aa45-df9b-4bc3-9a53-54ddf89b0d0f_486354799-1196177135208189-5382466500214498918-n.jpeg?io=true&size=avatar-hero-v1_0');
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: radial-gradient(100% 100% at center top, #000000 60%, transparent 100%);
+    mask-image: radial-gradient(100% 100% at center top, #000000 60%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 1.5rem;
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 65%; /* Mulai dari 40% ke bawah */
+    left: 0;
+    width: 80%;
+    height: 60%; /* Menutupi 60% bagian bawah */
+    background: linear-gradient(to bottom, transparent, rgba(155, 155, 155, 0.81));    pointer-events: none; /* Agar overlay tidak mengganggu interaksi */
+    z-index: 2; /* Pastikan overlay berada di atas gambar */
+}
+@media (max-width: 575.98px)
+{
+    .image-container
+    {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        min-width: 330px !important;
+        border-radius: 1.5rem !important;
+        /* Jika parent ada padding, atur juga di parent/container */
+    }
+
+    .container,
+    .row,
+    .col-12,
+    .col
+    {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+/* ----------------------------------- Meatball Menu----------------------------------------------------------- */
+.meatball-sticky {
+  position: sticky;
+  top: 1.5rem; /* Jarak dari atas viewport */
+  right: 55px;
+  z-index: 10;
+  float: right;
+  background: rgba(26,26,26,0.35);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meatball-sticky:hover
+{
+    background: rgba(26, 26, 26, 0.25);
+}
+
+.meatball-sticky:active
+{
+    background: #808080;
+}
+
+.meatball-sticky:focus
+{
+    outline: none;
+    border: 1px solid #D2D2D2;
+}
+
+/* ----------------------------------------Text---------------------------------------------- */
+.text-container
+{
+    top: 0;
+    z-index: 2;
+}
+
+.text-edsheeran
+{
+    font-size: 24px;
+    opacity: 1;
+}
+
+.col-12
+{
+    position: relative;
+    z-index: 1;
+}
+
+.col-sm-3 {
+
+    width: 100%;
+}
+
+.row
+{
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------button-button gemas -------------------------------------------*/
+.btn
+{
+    width: 568px;
+    min-height: 66.853px;
+    border-width: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    padding-left: 66px;
+    padding-right: 66px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    border-radius: 30px;
+    transition: none;
+}
+
+.btn.btn-secondary
+{
+    background: #4D6A8F;
+    border-color: #000000;
+    color: #fff;
+    box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.btn.btn-secondary:hover
+{
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.btn.btn-secondary:active
+{
+    background: #4D6A8F !important;
+    color: #fff !important;
+    box-shadow: 8px 8px 0px 0px #000000 !important;
+}
+
+/*------------------------------------------- Icon yang ada di button yang ada gambarnya------------------------------------------- */
+.icon-container
+{
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.icon-right
+{
+    right: 4px;
+    left: auto;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: none;
+}
+
+.icon-right-bottom
+{
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    z-index: 2;
+}
+
+/*--------------- kalo ini tuh gambar setelah pre save aziam -----------------------------*/
+
+.Image-shop-container
+{
+    left: 8px;
+    width: 251.16px;
+    height: 251.16px;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.icon-right-bottom
+{
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    z-index: 2;
+}
+
+.btn>p
+{
+    position: relative;
+    z-index: 4;
+}
+
+/* ---------------------------Toggleee buttonn--------------------------------- */
+.custom-control-input {
+  left: 0;
+  z-index: 0;
+  width: 12rem;
+  height: 3rem;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.custom-control-label {
+  margin-bottom: 0;
+  height: calc(3rem + 3px);
+  width: 12rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4rem;
+  cursor: pointer;
+}
+
+.custom-control-label::before {
+  content: '';
+  top: 50%;
+  left: 1;
+  width: 6rem;
+  height: 3rem;
+  background-color: #000000;
+  border-radius: 4rem;
+  transform: translateY(-50%);
+  transition: left 0.15s ease;
+  z-index: 1;
+position: absolute;
+}
+
+.toggle-text {
+  z-index: 1;
+  transition: color 500ms ease;
+}
+
+.text-link
+{
+    left: 0;
+}
+
+.text-shop
+{
+    right: 0;
+}
+
+.toggle-text {
+  position: absolute;
+  width: 6rem;
+  height: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 800;
+  transition: color 0.3s ease;
+  z-index: 2;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  left: calc(100% - 98px);
+  background-color: #000000;
+}
+
+/* Warna teks berdasarkan posisi toggle */
+.custom-control-input:not(:checked) ~ .custom-control-label .text-link {
+  color: #fff;
+}
+
+.custom-control-input:not(:checked) ~ .custom-control-label .text-shop {
+  color: #000;
+}
+
+.custom-control-input:checked ~ .custom-control-label .text-link {
+  color: #000;
+}
+
+.custom-control-input:checked ~ .custom-control-label .text-shop {
+  color: #fff;
+}
+
+/* ------------------- VIDEO YOUTUB EDSHEERAN ---------------------------------- */
+
+.video-button-wrapper:hover .circle-hover-grow
+{
+    transform: scale(1.15);
+}
+
+.circle-hover-grow
+{
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-button-wrapper
+ {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .scroll-container
+ {
+     display: flex;
+     overflow-x: auto;
+     scroll-snap-type: x mandatory;
+     gap: 30px;
+     scroll-behavior: smooth;
+ }
+
+ .scroll-container::-webkit-scrollbar
+ {
+     display: none;
+ }
+
+
+.linktree-box
+{
+    width: 256px;
+    height: 47px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.linktree-box:hover
+{
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px 0px;
+}
+
+/* ====== Responsive ====== */
+@media (min-width: 576px) {
+  .image-container {
+    width: 580px;
+    height: 28rem;
+    border-radius: 1.5rem;
+    position: relative;
+  }
+}
+
+/* ====== Utility Classes ====== */
+.text-white {
+  color: #fff !important;
+}
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+
+/* -------------------SHOP SECTION------------------------- */
+.shop-container
+{
+    width: 172.39px;
+    height: 172.39px;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border-radius: 18px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    margin-top: 8px;
+}
+
+@media (max-width: 575.98px)
+{
+
+    html,
+    body
+    {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container
+    {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .image-container
+    {
+        width: 100%;
+        max-width: 100%;
+        height: 180px;
+        border-radius: 0 0 1.5rem 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn
+    {
+        width: 100% !important;
+        min-width: 0;
+        min-height: 54px;
+        padding-left: 48px;
+        padding-right: 48px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    .linktree-box
+    {
+        width: 100% !important;
+        min-width: 0;
+        padding: 0 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    /* ...lanjutkan aturan lain seperti sebelumnya, tanpa width: 100vw atau width: 90vw... */
+}
+
+/* Pastikan tidak ada overflow horizontal */
+body
+{
+    overflow-x: hidden;
+}

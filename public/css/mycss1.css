@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(223, 231, 153);
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Inter';
+}
+p{
+    color : darkgreen
+}
+a:link{
+    text-decoration: none;
+    color: rgb(49, 94, 79);
+}
+a:visited{
+    text-decoration: none;
+    color: rgb(28, 56, 47);
+}
+a:hover{
+    text-decoration: none;
+    color : plum;
+    font-weight: bold;
+}
+
+.formatheader /*custom class*/ {
+    font-size: larger;
+}
