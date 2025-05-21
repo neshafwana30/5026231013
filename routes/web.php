@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//jangan lupa import controller gaisssss
 use App\Http\Controllers\Link;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BlogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,32 +31,46 @@ Route::get('blog', function () {
 	return view('blog');
 });
 
-Route::get('/pertama', function () {
+Route::get('pertama', function () {
     return view('pertama');
 });
 
-Route::get('/kodesoal1', function () {
+Route::get('kodesoal1', function () {
     return view('kodesoal1');
 });
 
-Route::get('/pertemuanketiga', function () {
+Route::get('pertemuanketiga', function () {
     return view('pertemuanketiga');
 });
 
-Route::get('/js1', function () {
+Route::get('js1', function () {
     return view('js1');
 });
 
-Route::get('/js2', function () {
+Route::get('js2', function () {
     return view('js2');
 });
 
-Route::get('/linktree', function () {
+Route::get('linktree', function () {
     return view('linktree');
 });
 
-Route::get('/index', function () {
+Route::get('ets', function () {
     return view('index');
 });
 
 Route::get('blog', [Link::class, 'helloworld']);
+
+Route::get('dosen', [Link::class, 'index']);
+
+Route::get('pegawai/{nama}', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir'] );
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+
+//route blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+
+

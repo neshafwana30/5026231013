@@ -137,7 +137,7 @@
                     </a>
                 </li>
                 <li class="work-item tugas">
-                    <a href="/index">
+                    <a href="ets">
                         <div class="work-image">
                             <img src="assets\images\ets.png" alt="Portfolio Item"
                                 style="height: 209px; object-fit: cover; display: flex" />
