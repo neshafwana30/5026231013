@@ -21,7 +21,7 @@ use App\Http\Controllers\PegawaiController;
 */
 
 Route::get('/', function () {
-    return view('frontend');
+    return view('welcome');
 });
 
 
@@ -61,6 +61,17 @@ Route::get('ets', function () {
     return view('index2');
 });
 
+
+Route::get('frontend', function () {
+    return view('frontend');
+});
+
+
+
+Route::get('template', function () {
+    return view('template');
+});
+
 Route::get('blog', [Link::class, 'helloworld']);
 
 Route::get('dosen', [Link::class, 'index']);
@@ -83,6 +94,10 @@ Route::post('/pegawai/store', [PegawaiController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
+Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
+
+// template
+
 
 
 
