@@ -6,6 +6,7 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\AdminController;
 
 
 
@@ -86,7 +87,6 @@ Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
 //CRUD Pegawai bes
-//ini versi read
 //route CRUD
 Route::get('/pegawai', [PegawaiController::class, 'index']);
 Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah']);
@@ -96,11 +96,11 @@ Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
 
-// template
-
-
-
-
-
-
-
+// TUGAS CRUD MEJA
+Route::get('/meja', [AdminController::class, 'tampilkanTabel']);
+Route::get('/meja/tambah', [AdminController::class, 'tambahMeja']);
+Route::post('/meja/store', [AdminController::class, 'store']);
+Route::get('/meja/edit/{id}', [AdminController::class, 'edit']);
+Route::post('/meja/update', [AdminController::class, 'update']);
+Route::get('/meja/hapus/{id}', [AdminController::class, 'hapus']);
+Route::get('/meja/cari', [AdminController::class, 'cari']);

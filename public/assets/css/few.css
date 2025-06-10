@@ -1,0 +1,262 @@
+/* ====== Navbar ====== */
+.navbar-custom
+{
+    background-color: #FFF9EF;
+    border: 0;
+    border-radius: 0;
+    z-index: 1000;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    transition: background, padding 0.4s ease-in-out 0s;
+}
+
+.navbar-custom .navbar-brand
+{
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-size: 22px;
+    color: #3A5987;
+}
+
+.navbar-header .navbar-toggle
+{
+    background: none;
+    border: none;
+    color: #3A5987;
+}
+
+.navbar-toggle .icon-bar
+{
+    background: #fff;
+}
+
+/* ====== Layout ====== */
+.container
+{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-12
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* ====== Module Section ====== */
+.module
+{
+    position: relative;
+    padding: 140px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: #fff;
+    z-index: 1;
+}
+
+/* ====== Filter Bar ====== */
+.filter
+{
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 70px;
+}
+
+.filter>li
+{
+    display: inline-block;
+    padding: 0 0 10px;
+    margin: 0 25px;
+}
+
+.filter a
+{
+    color: #3A5987;
+    text-decoration: none;
+    transition: color 0.125s ease-in-out 0s;
+}
+
+.filter a.current,
+.filter a:hover
+{
+    color: #BBD7EC;
+}
+
+/* ====== Font Alt ====== */
+.font-alt
+{
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ====== Works Grid ====== */
+.works-grid
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works-grid-3 .work-item
+{
+    width: 33.3333%;
+}
+
+.works-grid-gut .work-item
+{
+    padding: 0 0 10px 10px;
+}
+
+.works-hover-w .work-title
+{
+    color: #111;
+}
+
+.works-hover-w .work-item:hover .work-image:after
+{
+    background: #91b6f1db;
+}
+
+/* ====== Work Item ====== */
+.work-item
+{
+    position: relative;
+    margin: 0;
+    width: 33.3333%;
+}
+
+.work-item>a
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.work-image
+{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.work-image img
+{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.work-image:after
+{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.work-caption
+{
+    width: 100%;
+    padding: 0 20px;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: opacity 0.3s, bottom 0.3s;
+}
+
+.work-title
+{
+    font-size: 14px;
+    color: #fff;
+    margin: 0 0 6px;
+}
+
+.work-item:hover .work-image:after
+{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.work-item:hover .work-caption
+{
+    bottom: 50%;
+    opacity: 1;
+    z-index: 3;
+    transform: translateY(50%);
+}
+
+/* ====== Utility ====== */
+.text-center
+{
+    text-align: center;
+}
+
+.mt-0
+{
+    margin-top: 0 !important;
+}
+
+.mb-0
+{
+    margin-bottom: 0 !important;
+}
+
+.mt-20
+{
+    margin-top: 20px !important;
+}
+
+.mb-20
+{
+    margin-bottom: 20px !important;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 991px)
+{
+
+    .work-item,
+    .works-grid-3 .work-item
+    {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+
+    .work-item,
+    .works-grid-3 .work-item
+    {
+        width: 100%;
+    } }

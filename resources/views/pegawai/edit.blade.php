@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
+@extends('template')
 
-<head>
-    <title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-
-<body>
-
+@section('content')
     <h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
     <h3>Edit Pegawai</h3>
 
@@ -27,8 +21,4 @@
             <input type="submit" value="Simpan Data">
         </form>
     @endforeach
-
-
-</body>
-
-</html>
+@endsection

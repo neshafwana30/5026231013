@@ -7,9 +7,13 @@
     <br />
 
     <h3>Cari Data Pegawai :</h3>
-    <form action="/pegawai/cari" method="GET">
-        <input type="text" class="form-control" name="cari"placeholder="Cari Pegawai ..">
-        <input type="submit" class="btn btn-info"value="CARI">
+    <form action="" method="GET">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="cariMeja" placeholder="Cari Meja ...">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">Cari</button>
+            </div>
+        </div>
     </form>
     <br />
 

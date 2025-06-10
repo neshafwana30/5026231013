@@ -33,7 +33,7 @@
                 <a class="nav-link" href="/pegawai">Pegawai</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
+                <a class="nav-link" href="/meja">Tugas CRUD</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="eas">EAS</a>
