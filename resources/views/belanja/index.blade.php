@@ -25,7 +25,7 @@
                 <td>Rp{{ number_format($b->Jumlah * $b->Harga, 0, ',', '.') }}</td>
                 <td>
 
-                    <a href="/belanja/hapus/{{ $b->ID }}" class="btn btn-danger">Hapus</a>
+                    <a href="/belanja/hapus/{{ $b->ID }}" class="btn btn-danger">Batal</a>
                 </td>
             </tr>
         @endforeach
