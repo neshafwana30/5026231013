@@ -7,6 +7,8 @@ use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BelanjaController;
+
 
 
 
@@ -104,3 +106,9 @@ Route::get('/meja/edit/{id}', [AdminController::class, 'edit']);
 Route::post('/meja/update', [AdminController::class, 'update']);
 Route::get('/meja/hapus/{id}', [AdminController::class, 'hapus']);
 Route::get('/meja/cari', [AdminController::class, 'cari']);
+
+// TUGAS CRUD LATIHAN EAS
+Route::get('/belanja', [BelanjaController::class, 'index']);
+Route::get('/belanja/tambah', [BelanjaController::class, 'tambah']);
+Route::post('/belanja/store', [BelanjaController::class, 'store']);
+Route::get('/belanja/hapus/{id}', [BelanjaController::class, 'hapus']);

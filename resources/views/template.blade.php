@@ -18,6 +18,7 @@
         }
     </style>
 </head>
+@stack('scripts') {{-- Tambahkan baris ini di sini! --}}
 
 <body>
     <div class="jumbotron text-center mx-auto">
