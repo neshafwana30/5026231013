@@ -32,7 +32,7 @@
             </div>
             <div class="col-9 d-flex align-items-center">
                 <span class="mr-2">:</span>
-                <input type="text" name="hargaBarang" id="hargaBarang" required="required" class="form-control"
+                <input type="number" name="hargaBarang" id="hargaBarang" required="required" class="form-control"
                     style="flex:1" autocomplete="off" inputmode="numeric">
             </div>
 
@@ -60,7 +60,7 @@
         document.addEventListener('DOMContentLoaded', function() {
 
             // Format harga dan hitung total
-            const hargaInput = document.getElementById('hargaMeja');
+            const hargaInput = document.getElementById('hargaBarang');
             const jumlahInput = document.getElementById('jumlahBeli');
             const totalInput = document.getElementById('total');
 
