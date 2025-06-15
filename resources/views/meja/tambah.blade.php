@@ -1,6 +1,9 @@
 @extends('template')
 
 @section('content')
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0">Tambah Data Meja</h2>
+    </div>
     <a href="/meja" class="btn btn-info"> Kembali</a>
 
     <br />

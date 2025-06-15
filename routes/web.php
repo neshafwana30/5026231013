@@ -8,9 +8,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BelanjaController;
-
-
-
+use App\Http\Controllers\KaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,3 +110,12 @@ Route::get('/belanja', [BelanjaController::class, 'index']);
 Route::get('/belanja/tambah', [BelanjaController::class, 'tambah']);
 Route::post('/belanja/store', [BelanjaController::class, 'store']);
 Route::get('/belanja/hapus/{id}', [BelanjaController::class, 'hapus']);
+
+Route::get('/pageCounter', [AdminController::class, 'pageCounter']);
+
+// TUGAS CRUD LATIHAN EAS PART 3
+Route::get('/karyawan', [KaryawanController::class, 'tampilkanTabel']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+

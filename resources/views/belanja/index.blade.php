@@ -6,29 +6,33 @@
         <a href="/belanja/tambah" class="btn btn-primary">+ Beli</a>
     </div>
 
-    <table class="table table-striped">
-        <tr>
-            <th>Kode Pembelian</th>
-            <th>Kode Barang</th>
-            <th>Jumlah Pembelian </th>
-            <th>Harga Per Item</th>
-            <th>Total</th>
-            <th>Action</th>
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th style="line-height: 1.2; vertical-align: middle">Kode Pembelian</th>
+                <th style="line-height: 1.2; vertical-align: middle">Kode Barang</th>
+                <th style="line-height: 1.2; vertical-align: middle">Jumlah Pembelian </th>
+                <th style="line-height: 1.2; vertical-align: middle">Harga Per Item</th>
+                <th style = "vertical-align: middle">Total</th>
+                <th style = "vertical-align: middle">Action</th>
 
-        </tr>
-        @foreach ($belanja as $b)
-            <tr>
-                <td>{{ $b->ID }}</td>
-                <td>{{ $b->KodeBarang }}</td>
-                <td>{{ $b->Jumlah }}</td>
-                <td>Rp{{ number_format($b->Harga, 0, ',', '.') }}</td>
-                <td>Rp{{ number_format($b->Jumlah * $b->Harga, 0, ',', '.') }}</td>
-                <td>
-
-                    <a href="/belanja/hapus/{{ $b->ID }}" class="btn btn-danger">Batal</a>
-                </td>
             </tr>
-        @endforeach
+        </thead>
+        <tbody>
+            @foreach ($belanja as $b)
+                <tr class="text-center">
+                    <td>{{ $b->ID }}</td>
+                    <td>{{ $b->KodeBarang }}</td>
+                    <td>{{ $b->Jumlah }}</td>
+                    <td>Rp{{ number_format($b->Harga, 0, ',', '.') }}</td>
+                    <td>Rp{{ number_format($b->Jumlah * $b->Harga, 0, ',', '.') }}</td>
+                    <td>
+
+                        <a href="/belanja/hapus/{{ $b->ID }}" class="btn btn-danger">Batal</a>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
 
     {{ $belanja->links() }}

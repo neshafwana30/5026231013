@@ -85,13 +85,29 @@ class AdminController extends Controller
 		// menangkap data pencarian
 		$cari = $request->cariMeja;
 
-    		// mengambil data dari table pegawai sesuai pencarian data
-		$pegawai = DB::table('meja')
+    	// mengambil data dari table pegawai sesuai pencarian data
+		$meja = DB::table('meja')
 		->where('merkmeja','like',"%".$cari."%")
 		->paginate();
 
-    		// mengirim data pegawai ke view index
-		return view('meja.index',['meja' => $pegawai]);
+    	// mengirim data pegawai ke view index
+		return view('meja.index',['meja' => $meja]);
 
 	}
+
+    public function pageCounter(Request $request){
+
+        // mengambil data berdasarkan id yang dipilih
+		$pagecounter = DB::table('pagecounter')->where('id',1)->first();
+        $newCount = $pagecounter->jumlah + 1;
+        // 3. Update the database
+        DB::table('pagecounter')
+            ->where('id', 1)
+            ->update(['jumlah' => $newCount]);
+
+        // 4. Get the updated counter value to pass to the view
+        $updatedPageCounter = DB::table('pagecounter')->where('id', 1)->first();
+		return view('pagecounter',['pagecounter' => $updatedPageCounter]);
+
+    }
 }

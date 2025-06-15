@@ -29,7 +29,7 @@ class BelanjaController extends Controller
     public function store(Request $request){
 
 
-        $hargaperitem = str_replace('.', '', $request->hargaMeja);
+        $hargaperitem = str_replace('.', '', $request->hargaBarang);
 
         DB::table('keranjangbelanja')->insert([
             'KodeBarang' => $request->kodeBarang,

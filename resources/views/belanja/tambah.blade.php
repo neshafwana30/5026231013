@@ -1,6 +1,9 @@
 @extends('template')
 
 @section('content')
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0">Tambah Keranjang Belanja</h2>
+    </div>
     <a href="/belanja" class="btn btn-info"> Kembali</a>
 
     <br />
@@ -44,12 +47,9 @@
                 <input type="text" name="total" id="total" class="form-control" style="flex:1" readonly>
             </div>
 
-
-
-
             <div class="col-9"></div>
             <div class="col-3 mt-2">
-                <input type="submit" value="Simpan Data" class="btn btn-success">
+                <input type="submit" value="Simpan Data" class="btn btn-danger">
             </div>
         </div>
     </form>
