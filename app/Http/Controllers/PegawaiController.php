@@ -33,7 +33,7 @@ class PegawaiController extends Controller
     DB::table('pegawai')->insert([
         'pegawai_nama' => $request->nama,
         'pegawai_jabatan' => $request->jabatan,
-        'pegawai_umur' => $request->umur,
+        'pegawai_umur' => $request->Umur,
         'pegawai_alamat' => $request->alamat
     ]);
     return redirect('/pegawai');
@@ -57,7 +57,7 @@ class PegawaiController extends Controller
 		DB::table('pegawai')->where('pegawai_id',$request->id)->update([
 			'pegawai_nama' => $request->nama,
 			'pegawai_jabatan' => $request->jabatan,
-			'pegawai_umur' => $request->umur,
+			'pegawai_umur' => $request->Umur,
 			'pegawai_alamat' => $request->alamat
 		]);
 		// alihkan halaman ke halaman pegawai

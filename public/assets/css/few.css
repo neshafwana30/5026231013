@@ -60,17 +60,6 @@
     padding-left: 15px;
 }
 
-/* ====== Module Section ====== */
-.module
-{
-    position: relative;
-    padding: 140px 0;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    background-color: #fff;
-    z-index: 1;
-}
 
 /* ====== Filter Bar ====== */
 .filter
@@ -90,23 +79,26 @@
 
 .filter a
 {
-    color: #3A5987;
+    color: #7DA0C0;
     text-decoration: none;
     transition: color 0.125s ease-in-out 0s;
 }
 
-.filter a.current,
+.filter a.current{
+    color: #144180;
+}
+
 .filter a:hover
 {
-    color: #BBD7EC;
+    color: #144180;
 }
 
 /* ====== Font Alt ====== */
 .font-alt
 {
     font-family: "Roboto Condensed", sans-serif;
-    text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 500;
 }
 
 /* ====== Works Grid ====== */
@@ -131,12 +123,15 @@
 
 .works-hover-w .work-title
 {
-    color: #111;
+    color: #102C54;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0;
 }
 
 .works-hover-w .work-item:hover .work-image:after
 {
-    background: #91b6f1db;
+    background: #7da0c0c7;
 }
 
 /* ====== Work Item ====== */
