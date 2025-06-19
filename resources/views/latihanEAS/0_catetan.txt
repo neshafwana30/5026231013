@@ -1,0 +1,2 @@
+bikin controller baru
+php artisan make:controller latihanEAS

@@ -90,7 +90,7 @@
         }
 
         .custom-navbar .nav-link:hover {
-            color: #4F7AB1 !important;
+            color: #658ec4 !important;
             /* Warna teks saat hover, non-aktif */
         }
 
@@ -370,6 +370,11 @@
             pointer-events: none;
             background-color: #fff;
             border-color: #dee2e6;
+        }
+
+        .form-select:focus {
+            border-color: #6A4472;
+            box-shadow: 0 0 0 0.25rem #CEB5D3;
         }
     </style>
 </head>

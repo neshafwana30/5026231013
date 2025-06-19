@@ -9,6 +9,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\LatihanEASController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,4 +119,25 @@ Route::get('/karyawan', [KaryawanController::class, 'tampilkanTabel']);
 Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
 Route::post('/karyawan/store', [KaryawanController::class, 'store']);
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+
+// Latihan EAS Mandiri
+// Kode A
+Route::get('/chat', [LatihanEASController::class, 'emoji']);
+Route::get('/chat', [LatihanEASController::class, 'banjir']);
+
+// Kode B
+Route::get('/mahasiswa', [LatihanEASController::class, 'indexMahasiswa']);
+Route::get('/mahasiswa/edit/{nrp}', [LatihanEASController::class, 'editMahasiswa']);
+Route::post('/mahasiswa/update', [LatihanEASController::class, 'updateMahasiswa']);
+Route::get('/mahasiswa/{nrp}', [LatihanEASController::class, 'lihatMahasiswa']);
+// kode C
+Route::get('/kategori', [LatihanEASController::class, 'indexKategori']);
+Route::get('/kategori/lihat', [LatihanEASController::class, 'idKategori']);
+
+// other
+Route::get('/mahasiswaaktif', [LatihanEASController::class, 'indexMahasiswaAktif']);
+Route::get('/nilaikuliah', [LatihanEASController::class, 'indexNilaiKuliah']);
+Route::get('/nilaikuliah/tambah', [LatihanEASController::class, 'tambah']);
+Route::post('/nilaikuliah/store', [LatihanEASController::class, 'store']);
+
 

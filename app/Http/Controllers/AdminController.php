@@ -56,8 +56,7 @@ class AdminController extends Controller
 		return view('meja.edit',['meja' => $meja]);
 	}
 
-    public function update(Request $request)
-	{
+    public function update(Request $request){
         $ketersediaan = $request->has('ketersediaan') ? 1 : 0;
 
         $hargaMeja = str_replace('.', '', $request->hargaMeja);
@@ -103,9 +102,10 @@ class AdminController extends Controller
         // 3. Update the database
         DB::table('pagecounter')
             ->where('id', 1)
+            //ini yang 'jumlah' itu nama kolom di db
+
             ->update(['jumlah' => $newCount]);
 
-        // 4. Get the updated counter value to pass to the view
         $updatedPageCounter = DB::table('pagecounter')->where('id', 1)->first();
 		return view('pagecounter',['pagecounter' => $updatedPageCounter]);
 
