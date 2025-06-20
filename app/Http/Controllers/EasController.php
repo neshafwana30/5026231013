@@ -43,7 +43,7 @@ class EasController extends Controller
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$mykaryawan = DB::table('mykaryawan')->where('kodepegawai',$kodepegawai)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('mykaryawan.lihat',['mykaryawan' => $mykaryawan]);
+		return view('mykaryawan.view',['mykaryawan' => $mykaryawan]);
 	}
 
 
