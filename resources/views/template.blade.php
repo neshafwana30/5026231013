@@ -269,6 +269,20 @@
             border-color: #102C54;
         }
 
+        .btn-primary:active {
+            background-color: #102C54 !important;
+            border-color: #102C54 !important;
+        }
+
+        .btn-success:focus {
+            background-color: #102C54 !important;
+            border-color: #102C54 !important;
+            box-shadow: 0 0 0 0.25rem #4F7AB1 !important;
+
+        }
+
+
+
         /* --- Modifikasi Warna Button Edit (btn-success) --- */
         .btn-success {
             background-color: #CEB5D3;
@@ -281,6 +295,20 @@
             /* Warna hover untuk hijau */
             border-color: #a994ad;
         }
+
+        .btn-success:active {
+            background-color: #6A4472 !important;
+            border-color: #6A4472 !important;
+            box-shadow: 0 0 0 0.25rem #CEB5D3 !important;
+        }
+
+        .btn-success:focus {
+            background-color: #6A4472 !important;
+            border-color: #6A4472 !important;
+            box-shadow: 0 0 0 0.25rem #CEB5D3 !important;
+
+        }
+
 
         .btn-birumuda {
             background-color: #7CB2D8;
@@ -308,6 +336,19 @@
             background-color: #4a5093;
             /* Warna hover untuk merah */
             border-color: #4a5093;
+        }
+
+        .btn-danger:active {
+            background-color: #1f2352 !important;
+            /* Warna hover untuk merah */
+            border-color: #1f2352 !important;
+        }
+
+        .btn-danger:focus {
+            background-color: #102C54 !important;
+            border-color: #102C54 !important;
+            box-shadow: 0 0 0 0.25rem #5B62B3 !important;
+
         }
 
         .pagination {

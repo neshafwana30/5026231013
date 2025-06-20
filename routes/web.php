@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\LatihanEASController;
+use App\Http\Controllers\EasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -139,5 +140,12 @@ Route::get('/mahasiswaaktif', [LatihanEASController::class, 'indexMahasiswaAktif
 Route::get('/nilaikuliah', [LatihanEASController::class, 'indexNilaiKuliah']);
 Route::get('/nilaikuliah/tambah', [LatihanEASController::class, 'tambah']);
 Route::post('/nilaikuliah/store', [LatihanEASController::class, 'store']);
+
+// EAS
+Route::get('/eas', [EasController::class, 'tampilkanTabel']);
+Route::get('/eas/edit/{kodepegawai}', [EasController::class, 'edit']);
+Route::post('/eas/update', [EasController::class, 'update']);
+Route::get('/eas/{kodepegawai}', [EasController::class, 'lihat']);
+
 
 
